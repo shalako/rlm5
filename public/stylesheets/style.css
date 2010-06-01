@@ -1,0 +1,32 @@
+#wrapper {
+	background-color: #FFF;
+	overflow:hidden;
+}
+
+div#wrapper div {
+	float:left;
+	padding-bottom:9000px;
+	margin-bottom:-9000px;
+}
+
+#side {
+	width: 10%;
+	background-color: #FFF;
+}
+
+#main {
+	background-color: #FFF;
+	width: 90%;
+}
+
+.clear {
+	clear:both;
+}
+
+/*
+body{margin-bottom:50px}
+div.holder { overflow:hidden }
+div.holder div { float:left; width:30%; background-color:#9C0; margin-right:5px; padding:10px; padding-bottom:9000px; margin-bottom:-9000px }
+*/
+
+

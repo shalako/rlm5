@@ -1,0 +1,20 @@
+<p>
+	<b>Name:</b>
+</p>
+<p>
+  <%=h @artist.name %>
+</p>
+<p>
+  <b>Bio:</b>
+</p>
+<p>
+  <%=simple_format(h @artist.bio) %>
+</p>
+<p>
+	<b>Mixes:</b>
+</p>
+<p>	
+	<% @artist.mixes.each do |mix| %>
+		<%= link_to h(mix.name), mix %><br/>
+	<% end %>
+</p>

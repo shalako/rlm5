@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Artists: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'style', 'scaffold' %>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="side">
+      <p>
+				<%= link_to "Home", root_path %><br/>
+        <%= link_to "Artists", artists_path %><br/>
+				<%= link_to "Mixes", mixes_path %>
+      </p>
+ 
+      <p>
+				<%= link_to "Admin", :controller=>'/admin', :action=>'index' %>
+      </p>
+    </div>
+    <div id="main">
+      <p style="color: green"><%= flash[:notice] %></p>
+      <%= yield :layout %>
+    </div>
+    <div class="clear"></div>
+  </div>
+</body>
+</html>

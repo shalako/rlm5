@@ -1,0 +1,12 @@
+<p>
+  <b>Title:</b>
+  <%=h @mix.name %>
+</p>
+<p>
+	<b>Artist:</b>
+	<%=h @mix.artist.name %>
+</p>
+<p>
+  <b>Url:</b>
+  <%= link_to h(@mix.url), @mix.url %>
+</p>
