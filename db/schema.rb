@@ -9,17 +9,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100601040552) do
+ActiveRecord::Schema.define(:version => 20100607080045) do
 
   create_table "artists", :force => true do |t|
     t.string   "name"
     t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.date     "date"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "location"
   end
 
   create_table "mixes", :force => true do |t|
-    t.string   "name"
+    t.string   "title"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"

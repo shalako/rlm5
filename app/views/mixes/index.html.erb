@@ -1,15 +1,10 @@
-<h1>Listing mixes</h1>
+<h1>Mixes</h1>
 
 <table>
-  <tr>
-		<th>Artist</th>
-    <th>Title</th>
-  </tr>
-
 <% @mixes.each do |mix| %>
   <tr>
 		<td><%= h mix.artist.name %></td>
-    <td><%= link_to h(mix.name), mix %></td>
+    <td><%= link_to h(mix.title), mix %></td>
   </tr>
 <% end %>
 </table>

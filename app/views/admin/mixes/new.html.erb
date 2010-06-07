@@ -1,22 +1,3 @@
 <h1>New mix</h1>
-
-<% form_for([:admin, @mix]) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :name %>
-  </p>
-	<p>
-    <%= f.collection_select(:artist_id,Artist.all,:id,:name)  %>
-	</p>
-  <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
-
-<%= link_to 'Index', admin_mixes_path %>
+<%= error_messages_for :mix %>
+<%= render :partial => "form" %>

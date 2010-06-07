@@ -1,12 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
-
+  map.resources :events, :only => [:index, :show]
   map.resources :mixes, :only => [:index, :show]
   map.resources :artists, :only => [:index, :show]
 
 	map.namespace :admin do |admin|
-  	admin.resources :users
+  	admin.resources :users, :except => :show
 		admin.resources :artists, :except => :show
 		admin.resources :mixes, :except => :show
+		admin.resources :events, :except => :show
 	end
 
   # The priority is based upon order of creation: first created -> highest priority.

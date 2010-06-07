@@ -1,15 +1,10 @@
-<h1>Listing mixes</h1>
+<h1>Mixes</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-		<th>Title</th>
-  </tr>
-
 <% @mixes.each do |mix| %>
   <tr>
 		<td><%=h mix.artist.name %></td>
-    <td><%=h mix.name %></td>
+    <td><%=h mix.title %></td>
     <td><%= link_to 'Show', mix %></td>
     <td><%= link_to 'Edit', edit_admin_mix_path(mix) %></td>
     <td><%= link_to 'Destroy', [:admin, mix], :confirm => 'Are you sure?', :method => :delete %></td>
