@@ -4,12 +4,12 @@
   <%=h @event.date %><br/>
 	<%=h @event.location %>
 </p>
-<h4>Description</h4>
-<p>
-  <%= simple_format(h @event.description) %>
-</p>
+<h4>Artists</h4>
 <p>
 	<% @event.artists.each do |a| %>
 		<%= link_to h(a.name), a %><br/>
 	<% end %>
+</p><h4>Description</h4>
+<p>
+  <%= simple_format(h @event.description) %>
 </p>

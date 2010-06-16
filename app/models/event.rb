@@ -4,9 +4,6 @@ class Event < ActiveRecord::Base
   has_many :performances, :dependent => :destroy
   has_many :artists, :through => :performances
   
-  accepts_nested_attributes_for :performances, :reject_if => proc { |a| 
-     a['artist_id'].blank? }
-  accepts_nested_attributes_for :artists, :reject_if => proc {|a|
-     a['name'].blank?}
-
+  accepts_nested_attributes_for :artists, :reject_if => proc {|a| a['name'].blank?}, :allow_destroy => true
+  
 end

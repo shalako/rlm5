@@ -25,7 +25,7 @@ class Admin::EventsController < AdminController
   # GET /events/new.xml
   def new
     @event = Event.new
-    3.times { @event.artists.build}
+    3.times {@event.artists.build}
   
     respond_to do |format|
       format.html # new.html.erb
