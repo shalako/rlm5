@@ -1,0 +1,27 @@
+<% form_for([:admin,@event]) do |f| %>
+	<p>
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :location %><br/>
+		<%= f.text_field :location %>
+	</p>
+	<p>
+		<%= f.label :date %><br />
+		<%= f.date_select :date %>
+	</p>
+	<p>
+		<%= f.label :description %><br />
+		<%= f.text_area :description %>
+	</p>
+	<p>   
+		<% f.fields_for :artists do |builder| %>
+			<%= builder.label :name, "Artist"%><br/>
+			<%= builder.text_field :name %><br/>
+		<% end %>
+	</p>
+	<p>
+		<%= f.submit 'Submit' %> <%= link_to 'Cancel', admin_events_path %>
+	</p>
+<% end %>

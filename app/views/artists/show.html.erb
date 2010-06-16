@@ -1,5 +1,5 @@
 <%= image_tag @artist.photo.url(:small), :id => "artist-photo" if @artist.photo? %>
-<h2><%=h @artist.name %></h2>
+<h1><%=h @artist.name %></h1>
 <h4>Mixes</h4>
 <p>	
 	<% @artist.mixes.each do |mix| %>

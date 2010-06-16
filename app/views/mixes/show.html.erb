@@ -1,12 +1,4 @@
+<h1><%=h @mix.artist.name %> - <%=h @mix.title %></h1>
 <p>
-  <b>Title:</b>
-  <%=h @mix.title %>
-</p>
-<p>
-	<b>Artist:</b>
-	<%=h @mix.artist.name %>
-</p>
-<p>
-  <b>Url:</b>
-  <%= link_to h(@mix.url), @mix.url %>
+  <%= link_to "Download", @mix.url %>
 </p>

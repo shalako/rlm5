@@ -1,37 +1,52 @@
-#wrapper {
-	background-color: #FFF;
-	overflow:hidden;
+div#container {
+	background: #fff;
+	margin:0 auto;
+	width: 750px;
+	min-height:100%;
 }
-
-div#wrapper div {
-	float:left;
-	padding-bottom:9000px;
-	margin-bottom:-9000px;
+div#header {
+	height: 50px;
+	background: #fff url('/images/rl_logo.png') no-repeat 1em;	
+	padding: 1em;
 }
-
-#side {
-	width: 10%;
-	background-color: #FFF;
+	div#header .nav {
+		float: right;
+		margin-top:40px;
+	}
+.nav {
+	list-style: none; 
 }
-
-#main {
-	background-color: #FFF;
-	width: 90%;
+.nav li {
+	float: left; 
+	margin-left: 1em;
 }
-
+div#main {
+	padding:1em 1em 150px 1em;
+}
+div#footer {
+	position: relative;
+	margin-top: -150px;
+	height: 150px;
+	clear:both;
+}
+	div#foot {
+		background: #444;
+		color: #fff;
+		width: 730px;
+		height: 130px;
+		margin: 0px auto;
+		padding: 10px;
+	}
+	div#foot a, a:visited {
+		color:#fff;
+	}
 #artist-photo {
 	float: left;
 	margin: 0 20px 20px 0;
 }
-
 .clear {
 	clear:both;
 }
 
-/*
-body{margin-bottom:50px}
-div.holder { overflow:hidden }
-div.holder div { float:left; width:30%; background-color:#9C0; margin-right:5px; padding:10px; padding-bottom:9000px; margin-bottom:-9000px }
-*/
 
 

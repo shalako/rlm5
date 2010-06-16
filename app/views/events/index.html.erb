@@ -1,0 +1,10 @@
+<h1>Events</h1>
+
+<table>
+<% @events.each do |event| %>
+  <tr>
+    <td><%= link_to h(event.name), event %></td>
+    <td><%=h event.date %></td>
+  </tr>
+<% end %>
+</table>

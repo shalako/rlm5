@@ -1,0 +1,15 @@
+<h1><%=h @event.name %></h1>
+
+<p>
+  <%=h @event.date %><br/>
+	<%=h @event.location %>
+</p>
+<h4>Description</h4>
+<p>
+  <%= simple_format(h @event.description) %>
+</p>
+<p>
+	<% @event.artists.each do |a| %>
+		<%= link_to h(a.name), a %><br/>
+	<% end %>
+</p>

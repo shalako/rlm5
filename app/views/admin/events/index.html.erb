@@ -1,0 +1,17 @@
+<h1>Events</h1>
+
+<table>
+<% @events.each do |event| %>
+  <tr>
+    <td><%=h event.date %></td>
+    <td><%=h event.name %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
+    <td><%= link_to 'Destroy', [:admin,event], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New event', new_admin_event_path %>
