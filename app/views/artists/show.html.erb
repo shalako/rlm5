@@ -6,6 +6,12 @@
 		<%= link_to h(mix.title), mix %><br/>
 	<% end %>
 </p>
+<h4>Events</h4>
+<p>	
+	<% @artist.events.each do |event| %>
+		<%= link_to h(event.name), event %><br/>
+	<% end %>
+</p>
 <h4>Biography</h4>
 <p>
   <%=simple_format(h @artist.bio) %>
